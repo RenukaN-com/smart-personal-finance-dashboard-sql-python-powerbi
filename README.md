@@ -1,226 +1,47 @@
 # 💰 Smart Personal Finance Intelligence Dashboard
 
-An end-to-end Personal Finance Analytics project built using **Python, SQL, and Power BI** that transforms raw banking and UPI transaction data into meaningful financial insights.
-
-This project helps users understand their income, expenses, savings, payment habits, spending behaviour, and overall financial health through an interactive multi-page Power BI dashboard.
+_Transforming raw banking and UPI transaction data into actionable financial insights using SQL, Python, and Power BI._
 
 ---
 
-# Dashboard Preview
-
-## Financial Overview
-
-![Financial Overview](images/Financial_Overview.png)
-
----
-
-## Spending Intelligence
-
-![Spending Analysis](images/Spending_Analysis.png)
-
----
-
-## Financial Behavior
-
-![Behavior Analysis](images/Behavior_Analysis.png)
+## 📌 Table of Contents
+- <a href="#overview">Overview</a>
+- <a href="#business-problem">Business Problem</a>
+- <a href="#dataset">Dataset</a>
+- <a href="#tools--technologies">Tools & Technologies</a>
+- <a href="#project-structure">Project Structure</a>
+- <a href="#project-workflow">Project Workflow</a>
+- <a href="#dashboard-preview">Dashboard Preview</a>
+- <a href="#dashboard-pages">Dashboard Pages</a>
+- <a href="#key-insights">Key Insights</a>
+- <a href="#how-to-run-this-project">How to Run This Project</a>
+- <a href="#business-benefits">Business Benefits</a>
+- <a href="#future-improvements">Future Improvements</a>
+- <a href="#author--contact">Author & Contact</a>
 
 ---
+<h2><a class="anchor" id="overview"></a>Overview</h2>
 
-## Payment Intelligence
+This is an end-to-end Personal Finance Analytics project that transforms raw banking and UPI transaction data into meaningful financial insights. It helps users understand their income, expenses, savings, payment habits, spending behaviour, and overall financial health through an interactive, multi-page Power BI dashboard.
 
-![Payment Analysis](images/Payment_Analysis.png)
-
----
-
-# Project Objective
-
-The objective of this project is to analyze personal financial transactions and build an interactive dashboard that helps users:
-
-- Track income and expenses
-- Monitor savings rate
-- Identify major spending categories
-- Analyze merchant-wise expenses
-- Study payment preferences
-- Understand spending behaviour
-- Improve financial decision making
+The pipeline covers the full analytics lifecycle: data cleaning and feature engineering in Python, exploratory and aggregate analysis in SQL, and interactive visualization in Power BI.
 
 ---
+<h2><a class="anchor" id="business-problem"></a>Business Problem</h2>
 
-# Technology Stack
+Most people track spending in scattered bank statements or UPI apps with no unified view of their finances. This project aims to:
 
-- Python
-    - Pandas
-    - NumPy
-    - Matplotlib
-    - Seaborn
-
-- SQL
-
-- Power BI
-
-- Excel
+- Track income and expenses in one place
+- Monitor savings rate and financial health over time
+- Identify major spending categories and top merchants
+- Analyze payment mode preferences (UPI vs Bank, Credit vs Debit)
+- Understand weekday vs weekend spending behaviour
+- Support better, data-driven financial decision making
 
 ---
+<h2><a class="anchor" id="dataset"></a>Dataset</h2>
 
-# Project Workflow
-
-Raw Dataset
-
-↓
-
-Python Data Cleaning
-
-↓
-
-Feature Engineering
-
-↓
-
-Exploratory Data Analysis (EDA)
-
-↓
-
-SQL Analysis
-
-↓
-
-Power BI Dashboard
-
-↓
-
-Business Insights
-
----
-
-# Dashboard Pages
-
-## 1. Financial Overview
-
-KPIs
-
-- Total Income
-- Total Expense
-- Net Savings
-- Savings Rate
-- Total Transactions
-
-Visuals
-
-- Income vs Expense Trend
-- Financial Growth
-- Monthly Cash Flow
-- Financial Insights
-
----
-
-## 2. Spending Intelligence
-
-KPIs
-
-- Largest Category
-- Top Merchant Spend
-- Highest Transaction
-- Most Used Merchant
-
-Visuals
-
-- Category Distribution
-- Merchant Analysis
-- Top Spending Merchants
-- Treemap
-- Category Split
-
----
-
-## 3. Financial Behavior
-
-KPIs
-
-- Average Daily Spend
-- Average Monthly Spend
-- Weekend Spend %
-- Transactions Per Day
-
-Visuals
-
-- Weekly Spending Pattern
-- Monthly Trend
-- Transaction Size Distribution
-- Weekend vs Weekday Analysis
-- Category Group Treemap
-
----
-
-## 4. Payment Intelligence
-
-KPIs
-
-- UPI %
-- Bank %
-- Credit Transactions
-- Debit Transactions
-
-Visuals
-
-- UPI vs Bank Share
-- Credit vs Debit Share
-- Monthly Payment Trend
-- Average Transaction by Source
-- Payment Insights
-
----
-
-# Key Insights
-
-- UPI is the most preferred payment method.
-- Rent contributes the highest expense.
-- Debit transactions dominate payment activity.
-- Weekend spending is lower than weekday spending.
-- Zomato is the most frequently used merchant.
-- Financial health score is Good.
-- Savings Rate is approximately 9.6%.
-
----
-
-# Python Tasks
-
-- Data Cleaning
-- Missing Value Handling
-- Feature Engineering
-- Date Transformation
-- Exploratory Data Analysis
-- Chart Generation
-
----
-
-# SQL Tasks
-
-- Data Validation
-- Aggregations
-- Category Analysis
-- Merchant Analysis
-- Payment Analysis
-- Monthly Trends
-
----
-
-# Power BI Features
-
-- Interactive Dashboard
-- Dynamic Filters
-- DAX Measures
-- KPI Cards
-- Bookmarks
-- Multi-page Navigation
-- Drill-down Analysis
-
----
-
-# Dataset
-
-Personal Finance Transactions Dataset
-
-Contains
+Personal Finance Transactions Dataset, containing:
 
 - Income
 - Expenses
@@ -230,62 +51,149 @@ Contains
 - Date
 - Transaction Amount
 
----
+Files: `data/Data.xlsx`, `data/finance_dashboard_dataset.xlsx`
 
-# Folder Structure
+---
+<h2><a class="anchor" id="tools--technologies"></a>Tools & Technologies</h2>
+
+- **Python** — Pandas, NumPy, Matplotlib, Seaborn
+- **SQL** — Data validation, aggregations, category & merchant analysis
+- **Power BI** — Interactive dashboard, DAX measures, bookmarks, drill-downs
+- **Excel** — Source data handling
+
+---
+<h2><a class="anchor" id="project-structure"></a>Project Structure</h2>
 
 ```
-Smart-Personal-Finance-Dashboard
+smart-personal-finance-dashboard-sql-python-powerbi/
 │
-├── Dataset
-├── Python
-├── SQL
-├── PowerBI
-├── Images
 ├── README.md
-└── Dashboard.pbix
+├── data/
+│   ├── Data.xlsx
+│   └── finance_dashboard_dataset.xlsx
+│
+├── notebook/
+│   └── Coding.ipynb
+│
+├── SQL/
+│   └── smart-finance-dashboard.sql.sql
+│
+├── dashboard/
+│   └── Smart Personal Finance Intelligence Dashboard.pbix
+│
+└── Images/
+    ├── Page1_Financial_Overview.png
+    ├── Page2_Spending_Analysis.png
+    ├── Page3_Behavior_Analysis.png
+    └── Page4_Payment_Analysis.png
 ```
 
 ---
+<h2><a class="anchor" id="project-workflow"></a>Project Workflow</h2>
 
-# Business Benefits
-
-- Monitor monthly expenses
-- Improve savings habits
-- Identify unnecessary spending
-- Track payment behaviour
-- Better financial planning
-- Personal budgeting
+```
+Raw Dataset
+     ↓
+Python Data Cleaning
+     ↓
+Feature Engineering
+     ↓
+Exploratory Data Analysis (EDA)
+     ↓
+SQL Analysis
+     ↓
+Power BI Dashboard
+     ↓
+Business Insights
+```
 
 ---
+<h2><a class="anchor" id="dashboard-preview"></a>Dashboard Preview</h2>
 
-# Future Improvements
+### Financial Overview
+![Financial Overview](Images/Page1_Financial_Overview.png)
 
-- Forecast future expenses
+### Spending Intelligence
+![Spending Analysis](Images/Page2_Spending_Analysis.png)
+
+### Financial Behavior
+![Behavior Analysis](Images/Page3_Behavior_Analysis.png)
+
+### Payment Intelligence
+![Payment Analysis](Images/Page4_Payment_Analysis.png)
+
+---
+<h2><a class="anchor" id="dashboard-pages"></a>Dashboard Pages</h2>
+
+**1. Financial Overview**
+- KPIs: Total Income, Total Expense, Net Savings, Savings Rate, Total Transactions
+- Visuals: Income vs Expense Trend, Financial Growth, Monthly Cash Flow, Financial Insights
+
+**2. Spending Intelligence**
+- KPIs: Largest Category, Top Merchant Spend, Highest Transaction, Most Used Merchant
+- Visuals: Category Distribution, Merchant Analysis, Top Spending Merchants, Treemap, Category Split
+
+**3. Financial Behavior**
+- KPIs: Average Daily Spend, Average Monthly Spend, Weekend Spend %, Transactions Per Day
+- Visuals: Weekly Spending Pattern, Monthly Trend, Transaction Size Distribution, Weekend vs Weekday Analysis, Category Group Treemap
+
+**4. Payment Intelligence**
+- KPIs: UPI %, Bank %, Credit Transactions, Debit Transactions
+- Visuals: UPI vs Bank Share, Credit vs Debit Share, Monthly Payment Trend, Average Transaction by Source, Payment Insights
+
+---
+<h2><a class="anchor" id="key-insights"></a>Key Insights</h2>
+
+- UPI is the most preferred payment method
+- Rent contributes the highest expense category
+- Debit transactions dominate overall payment activity
+- Weekend spending is lower than weekday spending
+- Zomato is the most frequently used merchant
+- Overall financial health score is **Good**
+- Savings rate is approximately **9.6%**
+
+---
+<h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
+
+1. Clone the repository:
+```bash
+git clone https://github.com/RenukaN-com/smart-personal-finance-dashboard-sql-python-powerbi.git
+```
+2. Explore the dataset:
+   - `data/Data.xlsx`
+   - `data/finance_dashboard_dataset.xlsx`
+3. Run the Python notebook for cleaning, feature engineering, and EDA:
+   - `notebook/Coding.ipynb`
+4. Run the SQL analysis:
+   - `SQL/smart-finance-dashboard.sql.sql`
+5. Open the Power BI dashboard:
+   - `dashboard/Smart Personal Finance Intelligence Dashboard.pbix`
+
+---
+<h2><a class="anchor" id="business-benefits"></a>Business Benefits</h2>
+
+- Monitor monthly income and expenses at a glance
+- Improve savings habits with clear savings-rate tracking
+- Identify unnecessary or high-impact spending categories
+- Track payment behaviour across UPI, bank, credit, and debit
+- Support better personal budgeting and financial planning
+
+---
+<h2><a class="anchor" id="future-improvements"></a>Future Improvements</h2>
+
+- Forecast future expenses using time-series models
 - AI-based spending recommendations
-- Budget alerts
+- Budget alerts and threshold notifications
 - Credit score integration
-- Mobile dashboard
+- Mobile-friendly dashboard version
 
 ---
-
-# Author
+<h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
 
 **Renuka Nival**
-
 AI & Data Science Graduate
 
-Skills
+Skills: Python · SQL · Power BI · Tableau · Machine Learning · Data Analytics
 
-- Python
-- SQL
-- Power BI
-- Tableau
-- Machine Learning
-- Data Analytics
-
-GitHub :
-https://github.com/RenukaN-com
-
-🔗 LinkedIn :
-https://www.linkedin.com/in/renuka-nival-797225231/
+🔗 GitHub: [RenukaN-com](https://github.com/RenukaN-com)
+🔗 LinkedIn: [Renuka Nival](https://www.linkedin.com/in/renuka-nival-797225231/)
